@@ -167,7 +167,6 @@ class Ui(QtWidgets.QMainWindow):
         self.bt_groupHit.checkedButton().text()
         ##END
         self.lb_btDeci.setText(op[4])
-        self.le_btSave.text(op[5])
         #Figure #5
         op = op_ls[5].replace("'", "").replace(" ", "").strip(")").split(",")
         self.ch_Figure.setChecked(bool(op[0]))
