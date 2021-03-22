@@ -1,0 +1,4711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Cblaster</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabs_Cblaster">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>861</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideLeft</enum>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab_search">
+     <attribute name="title">
+      <string>Search</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>661</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label1">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Search options</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QRadioButton" name="rb_comLoc">
+         <property name="text">
+          <string>Combi local</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QRadioButton" name="rb_hmmer">
+         <property name="text">
+          <string>HMMER</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QRadioButton" name="rb_comRem">
+         <property name="text">
+          <string>Combi remote</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QRadioButton" name="rb_remote">
+         <property name="text">
+          <string>Remote</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="rb_local">
+         <property name="text">
+          <string>Local</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>691</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>672</width>
+         <height>1174</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_34">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Filtering</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Input options</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <layout class="QGridLayout" name="gridLayout_11" rowminimumheight="0,0,0,0,0">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item row="4" column="2">
+           <widget class="QPushButton" name="pb_stSave">
+            <property name="text">
+             <string>save as</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>output file</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>Decimal places</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="le_stSave"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_40">
+            <property name="text">
+             <string>Delimiter</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="le_stDeli"/>
+          </item>
+          <item row="1" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_stDecimal">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QSlider" name="horizontalSlider_3">
+              <property name="maximum">
+               <number>5</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="ch_stSort">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Sort clusters</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="ch_stHide">
+            <property name="text">
+             <string>Hide Headers</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>Request identifier (RID)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="le_sRID"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="le_sEntrz"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="le_sDB"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_32">
+            <property name="text">
+             <string>FASTA Database</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_31">
+            <property name="text">
+             <string>Number of CPUs</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_33">
+            <property name="text">
+             <string>Pfam database</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="le_sPfamBrowse"/>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="le_sFasBrowse"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="le_sCPU"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="le_sDiaBrowse"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_29">
+            <property name="text">
+             <string>Diamond database</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pb_sDiaBrowse">
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Database</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Entrez query</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QPushButton" name="pb_sPfamBrowse">
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="pb_sFasBrowse">
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_57">
+            <property name="text">
+             <string>Maximum hits</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="le_sMaxHits">
+            <property name="text">
+             <string>5000</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <property name="bottomMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QRadioButton" name="rb_inFile">
+                <property name="text">
+                 <string>File</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rb_inSession">
+                <property name="text">
+                 <string>Session file</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rb_inSeqId">
+                <property name="text">
+                 <string>Sequence IDs</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLineEdit" name="le_inBrowse"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pb_inBrowse">
+                <property name="text">
+                 <string>Browse</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>HMM profiles:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="le_inHmm">
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="cursorPosition">
+               <number>0</number>
+              </property>
+              <property name="dragEnabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <layout class="QGridLayout" name="gridLayout_9">
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pb_flSave">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Save as</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_35">
+            <property name="text">
+             <string>Max. evalue</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_36">
+            <property name="text">
+             <string>Min. Identity (%)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>Min. Query coverage (%)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="le_fMaxEval"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="le_fMinId"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="le_flSave">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="le_fQuCov"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="ch_fRecom">
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string>Recompute</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_39">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Summary table</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QCheckBox" name="ch_SumTab">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Generate Summary table</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QCheckBox" name="ch_BinaryTab">
+          <property name="text">
+           <string>Generate Binary table</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="label_37">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Binary table</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="QLabel" name="label_55">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Figure</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0">
+         <widget class="QCheckBox" name="ch_Figure">
+          <property name="text">
+           <string>Generate Cblaster plot</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <layout class="QGridLayout" name="gridLayout_12">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_54">
+            <property name="text">
+             <string>Output file</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="le_btSave"/>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <widget class="QRadioButton" name="rb_btMax">
+              <property name="text">
+               <string>Max</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rb_btSum">
+              <property name="text">
+               <string>Sum</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rb_btLen">
+              <property name="text">
+               <string>Len</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_52">
+            <property name="text">
+             <string>Hit attribute</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_49">
+            <property name="text">
+             <string>Delimiter</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="le_btDeli"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="ch_btHide">
+            <property name="text">
+             <string>Hide headers</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_51">
+            <property name="text">
+             <string>Key function</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_53">
+            <property name="text">
+             <string>Decimal places</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <widget class="QRadioButton" name="rb_btID">
+              <property name="text">
+               <string>Identity</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rb_btCov">
+              <property name="text">
+               <string>Coverage</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rb_btBit">
+              <property name="text">
+               <string>Bitscore</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rb_btEval">
+              <property name="text">
+               <string>Evalue</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <item>
+               <spacer name="horizontalSpacer_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="lb_btDeci">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QSlider" name="horizontalSlider_5">
+              <property name="maximum">
+               <number>5</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="pb_btSave">
+            <property name="text">
+             <string>Save as</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="16" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <widget class="QLabel" name="label_56">
+            <property name="text">
+             <string>Output file</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_fSave"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_fSave">
+            <property name="text">
+             <string>save as</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <zorder>scrollArea</zorder>
+     <zorder>layoutWidget</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_neigh">
+     <attribute name="title">
+      <string>Neighbourhood</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>551</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>plot</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbl_nOut">
+         <property name="text">
+          <string>Output file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lbl_nNrsam">
+         <property name="text">
+          <string>Nr. of samples</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lbl_nMax">
+         <property name="text">
+          <string>Max. intergenic distance</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="le_max">
+         <property name="text">
+          <string>100000</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="le_samNr">
+         <property name="text">
+          <string>100</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pb_nSaveOut">
+         <property name="text">
+          <string>Save as</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_nSaveOut"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbl_nSession">
+         <property name="text">
+          <string>Session file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pb_nBrowse">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_nBrowse"/>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="pb_nSavePlot">
+         <property name="text">
+          <string>Save as</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Delimiter</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="le_nSavePlot"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_nDeli"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>350</y>
+        <width>551</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Sampling space:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QRadioButton" name="rb_linear">
+             <property name="text">
+              <string>Linear</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rb_log">
+             <property name="text">
+              <string>Log</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>Decimal places</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_nSliderVal">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider">
+           <property name="maximum">
+            <number>5</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ch_nHide">
+         <property name="text">
+          <string>Hide Headers</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_makedb">
+     <attribute name="title">
+      <string>Makedb</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>541</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_mdbBrowse"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_mdbSave"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pb_mdbSave">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Save As</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Genome files</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pb_mdbBrowse">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Database names</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Number of CPUs</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Batch Size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_mNrCPU"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="le_mBatch"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCheckBox" name="ch_mOver">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>380</y>
+        <width>231</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Force overwrite files</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_extract">
+     <attribute name="title">
+      <string>Extract</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>551</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="le_eSca"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Output file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Scaffolds</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Organisms</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Query sequence</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Delimiter</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="le_eDel"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_eQseq"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_exBrowse"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Session file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_exSave"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pb_exBrowse">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pb_exSave">
+         <property name="text">
+          <string>Save as</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="le_eOrg"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>380</y>
+        <width>327</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="ch_Down">
+         <property name="text">
+          <string>Download</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ch_name">
+         <property name="text">
+          <string>Name only</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Extract Clusters</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>571</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="3" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QRadioButton" name="rb_bigscape">
+           <property name="text">
+            <string>Bigscape</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rb_genbank">
+           <property name="text">
+            <string>Genbank</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_ecBrowseOut"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>Output directory</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_ecPre"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pb_ecBrowseSess">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_ecBrowseSess"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Session File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>Output Format</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Clusters</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>Prefix</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pb_ecBrowseOut">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="le_ecClus"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Score threshold</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Organisms</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="le_ecScThr"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>Scaffolds</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="le_ecScaf"/>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="le_ecOrg"/>
+       </item>
+       <item row="8" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_ecMaxClu">
+             <property name="text">
+              <string>50</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider_2">
+           <property name="maximum">
+            <number>200</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>Maximum clusters</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Plot Clusters</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>40</y>
+        <width>511</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="le_pcScThr"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="le_pcOrg"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_47">
+         <property name="text">
+          <string>Organisms</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_48">
+         <property name="text">
+          <string>Scaffolds</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="lepcScaf"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_pcBrowseOut"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>Output directory</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>Clusters</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_pcBrowseSes"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>Session File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pb_pcBrowseSes">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pb_pcBrowseOut">
+         <property name="text">
+          <string>Save as</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_pcClu"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_46">
+         <property name="text">
+          <string>Score threshold</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_50">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>390</y>
+        <width>103</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Maximum clusters</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>390</y>
+        <width>330</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_pcMaxClu">
+           <property name="text">
+            <string>50</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QSlider" name="horizontalSlider_4">
+         <property name="maximum">
+          <number>200</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_citation">
+     <attribute name="title">
+      <string>Citation</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>841</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you found cblaster useful, please cite: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;cblaster, Gilchrist et al. XX (2020)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Cblaster makes use of the following tools: &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;DIAMOND &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Buchfink, B., Xie, C. &amp;amp; Huson, D. H.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fast and sensitive protein alignment using DIAMOND. Nat Methods 12, 59-60 (2015)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;NCBI BLAST API&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Acland, A. et al. &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Database resources of the National Center for Biotechnology Information. &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Nucleic Acids Res. 42, 7-17 (2014)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;HMMER&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Eddy, S. R. &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Accelerated profile HMM searches &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PLOS Computational Biology, 7(10) (2011)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>530</y>
+      <width>395</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pb_start">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Start</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pb_save">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pb_load">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pb_exit">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>tabs_Cblaster</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>48</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>lbl_nSliderVal</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>421</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>lb_ecMaxClu</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>411</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_inSeqId</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>188</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_inFile</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_16</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inFile</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSession</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_16</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inHmm</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inHmm</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSeqId</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>351</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_16</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inFile</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_inSession</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSession</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inFile</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_16</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inHmm</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inHmm</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSeqId</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inFile</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_16</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inHmm</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSeqId</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSession</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSeqId</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSeqId</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>188</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>135</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSession</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>rb_inSession</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_inBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_3</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>lb_stDecimal</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>695</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>668</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_fRecom</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_flSave</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>559</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_fRecom</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_flSave</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>558</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_stDeli</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>638</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_40</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>638</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_43</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>666</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>horizontalSlider_3</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>695</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>ch_stSort</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>724</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_45</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>750</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_stSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>751</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_stSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>750</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>lb_stDecimal</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>668</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_4</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>lb_pcMaxClu</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_5</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>lb_btDeci</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>969</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>942</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_Figure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_56</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>1051</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>1078</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_Figure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_fSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>1051</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>1079</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_Figure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_fSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>1051</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>1078</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_49</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>71</x>
+     <y>830</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_btDeli</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>830</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>ch_btHide</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>40</x>
+     <y>858</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_51</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>49</x>
+     <y>884</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_52</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>912</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_53</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>940</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>label_54</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>85</x>
+     <y>998</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btMax</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>885</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btSum</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>885</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btLen</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>885</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btID</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>913</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btCov</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>275</x>
+     <y>913</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btBit</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>913</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>rb_btEval</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>913</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>le_btSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>999</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_btSave</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>450</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>998</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>horizontalSlider_5</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>592</x>
+     <y>969</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>lb_btDeci</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>416</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>942</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>ch_stHide</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>724</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_18</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDB</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_19</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sEntrz</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_20</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sRID</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_29</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_31</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sCPU</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_32</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>60</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sFasBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>109</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sFasBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sPfamBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>125</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>label_57</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_local</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sMaxHits</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_18</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>151</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDB</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_19</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sEntrz</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>537</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_20</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sRID</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_29</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDiaBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>583</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sDiaBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_31</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sCPU</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>561</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_32</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sFasBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>label_57</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sMaxHits</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>249</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>535</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sFasBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_remote</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sPfamBrowse</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_18</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDB</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_19</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sEntrz</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_20</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sRID</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>491</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_31</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>114</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sCPU</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_29</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_32</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>label_57</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_hmmer</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sMaxHits</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_18</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDB</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_19</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sEntrz</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>528</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_20</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sRID</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_29</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_31</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>118</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sCPU</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>470</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_57</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sMaxHits</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_18</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>108</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDB</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_19</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sEntrz</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_20</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sRID</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_29</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sDiaBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_31</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>85</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sCPU</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_32</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sFasBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_33</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>pb_sPfamBrowse</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>label_57</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comRem</sender>
+   <signal>clicked()</signal>
+   <receiver>le_sMaxHits</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked()</signal>
+   <receiver>le_stDeli</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>638</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_SumTab</sender>
+   <signal>clicked()</signal>
+   <receiver>le_stSave</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>751</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked()</signal>
+   <receiver>le_btDeli</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>331</x>
+     <y>830</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_BinaryTab</sender>
+   <signal>clicked()</signal>
+   <receiver>le_btSave</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>999</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ch_Figure</sender>
+   <signal>clicked()</signal>
+   <receiver>le_fSave</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>1051</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>1079</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_comLoc</sender>
+   <signal>clicked()</signal>
+   <receiver>label_32</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>89</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
+</ui>

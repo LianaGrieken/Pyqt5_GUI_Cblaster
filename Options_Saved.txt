@@ -1,0 +1,6 @@
+Search ('Local', '', '', '') ('', '', '', False, '') (False, '', '0', False, False, '') (False, False, 'Max', 'Identity', '0', '') (False, '')
+Neighbourhood ('', '', '', '', '100000', '100', 'Linear', '0', False) 
+Makedb ('', '', '', '', False)
+Extract ('', '', '', '', '', '', False, False) 
+Extract_Clusters ('sess', '', '', 'Genbank', '', '', 'cat', '2_222', '115') 
+Plot_Clusters ('', '', '', '', '', '', '50')
