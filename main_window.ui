@@ -62,7 +62,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideLeft</enum>
@@ -88,7 +88,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <widget class="QLabel" name="label1">
+        <widget class="QLabel" name="lbl_search">
          <property name="font">
           <font>
            <weight>75</weight>
@@ -156,14 +156,14 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-537</y>
          <width>672</width>
          <height>1174</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
         <item row="4" column="0">
-         <widget class="QLabel" name="label_34">
+         <widget class="QLabel" name="lbl_filtering">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -190,7 +190,7 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_15">
+         <widget class="QLabel" name="lbl_input">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -605,7 +605,7 @@
          </layout>
         </item>
         <item row="6" column="0">
-         <widget class="QLabel" name="label_39">
+         <widget class="QLabel" name="lbl_sum_table">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -641,7 +641,7 @@
          </widget>
         </item>
         <item row="11" column="0">
-         <widget class="QLabel" name="label_37">
+         <widget class="QLabel" name="lbl_bin_Table">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -654,7 +654,7 @@
          </widget>
         </item>
         <item row="14" column="0">
-         <widget class="QLabel" name="label_55">
+         <widget class="QLabel" name="lbl_figure">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -1174,7 +1174,7 @@
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="lbl_genome">
          <property name="font">
           <font>
            <pointsize>10</pointsize>

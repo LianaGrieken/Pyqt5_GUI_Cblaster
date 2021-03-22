@@ -19,6 +19,14 @@ class Ui(QtWidgets.QMainWindow):
         self.make_bgroup_binary_key()
         self.make_bgroup_binary_hit()
 
+        #Show tooltips for the options
+        self.tooltip_search()
+        self.tooltip_neighbourhood()
+        self.tooltip_makedb()
+        self.tooltip_extract()
+        self.tooltip_extract_clusters()
+        self.tooltip_plot_clusters()
+
         # Event: Change tab index when clicked
         self.tabs_Cblaster.currentChanged.connect(self.change_tabindex)
         # Event: Exit program
@@ -392,6 +400,74 @@ class Ui(QtWidgets.QMainWindow):
         figure = self.ch_Figure.isChecked()
         fig_out = self.le_fSave.text()
         return figure, fig_out
+
+    def tooltip_search(self):
+        self.lbl_search.setToolTip("Specify the search mode and databases to be used in the cblaster run."
+            " In remote mode, the database value should correspond to a BLAST"
+            " database hosted by the NCBI. In local mode, the database arguments"
+            " should refer to files generated using cblaster makedb. When using any"
+            " of the hmm modes a local pfam databse will be saved at the given "
+            "location or extracted from there. The fasta database should refer to "
+            "the fasta file generated using cblaster makedb.")
+        self.lbl_input.setToolTip("Specify the protein sequences that you want to search. These can"
+            " be provided by either using a FASTA file or entering the NCBI"
+            " accessions of sequences. When running any of the HMM at least "
+            "one HMM profiles has to be defined. Alternatively, a session file"
+            " generated in a previous cblaster run can be loaded so that you "
+            "do not have to repeat a search.")
+        self.lbl_filtering.setToolTip("Recompute previous search session using new thresholds. The filtered"
+            " session will be written to the file specified by this argument. If this"
+            " argument is specified with no value, the session will be filtered but"
+            " not saved (e.g. for plotting purposes).")
+        self.lbl_sum_table.setToolTip( "This is the standard cblaster results table that is shown at the"
+            " end of each run. To save this table to a file, pick a file path"
+            " using the option below. If no path is provided, the table will"
+            " be printed in the terminal.")
+        self.lbl_bin_Table.setToolTip("The binary table will give you an overview of the absence/presence of"
+            " query genes in the hit clusters identified in the search. To generate"
+            " this table, please provide a file name below.")
+        self.lbl_figure.setToolTip("This generates a visual representation of the binary table as a"
+            " cluster heatmap. If this is not"
+            " specified, the plot will be saved in a plot.html in the temporary folder,"
+            " at which point the figure can be manipulated and saved as SVG."
+            " If a file path is specified, a static HTML file will be generated at"
+            " that path.")
+
+    def tooltip_neighbourhood(self):
+        self.lbl_nSession.setToolTip("This workflow will allow you to plot the effect of increasing the"
+            " intergenic distance threshold on the size and amount of detected"
+            " hit clusters. This is helpful mainly as a sanity check, to ensure"
+            " you are not missing clusters due to a bad threshold value. However,"
+            " it can also give you an idea of the approximate size of the"
+            " 'neighbourhood' of your query proteins.")
+
+    def tooltip_makedb(self):
+        self.lbl_genome.setToolTip("This workflow will allow you to create a local"
+            " database for cblaster from a collection of genome"
+            " files in GenBank or GFF3+FASTA formats. It will"
+            " produce a formatted DIAMOND database (.dmnd)"
+            " containing protein sequences in the supplied"
+            " genomes, as well as a sqlite3 file which stores"
+            " genomic coordinates for these proteins. To use"
+            " these files in a cblaster run, choose a local"
+            " search, then supply the DIAMOND (.dmnd) file"
+            " using the Database field.")
+
+    def tooltip_extract(self):
+        self.label_4.setToolTip("This module will allow you to extract sequences from saved cblaster"
+            " session files. You can filter sequences by the queries they hit,"
+            " or the organisms and scaffolds they belong to.")
+
+    def tooltip_extract_clusters(self):
+        self.label_13.setToolTip("This module allows you to extract clusters from a session.json file into a genbank file"
+                 " for each separate cluster. The genbank files can be formatted to include qualifiers "
+                 "to make them readable by bigscape.")
+
+    def tooltip_plot_clusters(self):
+        self.label_42.setToolTip("This module allows for plotting of a subset of clusters using clinker (see citation tab"
+                 " for more information). Running clinker using a cblaster session file is significantly"
+                 " faster then running clinker with separate genbank files extracted using the Extract"
+                 " Clusters module, because the all vs all allignment of clinker can be skipped.")
 
     def hide_options(self):
         # Hide search options not needed for local search when program starts
